@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4caf50;
+  color: #ECF87F;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #3D550C;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 20px
+}
+
+.choices button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFA500;
+  color: #fff;
+  font-size: 16px;
+}
+
+.choices button:hover {
+  background-color: #FF0000;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+
+.link-container {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.link-container a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
