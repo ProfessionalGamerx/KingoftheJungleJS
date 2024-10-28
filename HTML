@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King of the Jungle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>King of the Jungle!</h1>
+        <p><strong>Step into the Wild!</strong><br>In this fun and thrilling game, you’ll face off against the computer in an exciting showdown
+            between three mighty animals: the powerful elephant, the clever mouse, and the ferocious lion.</p>
+
+        <h2>How to Play</h2>
+
+        <p><strong>Choose Your Animal:</strong> Click on one of the buttons to select your choice: the
+            <b>Elephant</b>, the <b>Mouse</b>, or the <b>Lion</b>.
+        </p>
+        <p><strong>Face the Computer:</strong> The computer will randomly choose its own animal.</p>
+        <p><strong>Determine the Winner:</strong> The winner is determined based on the following rules:
+                <p><b>Elephant</b> beats <b>Lion</b>
+                <br><b>Lion</b> beats <b>Mouse</b>
+                <br><b>Mouse</b> beats <b>Elephant</b></p>
+            If you and the computer choose the same animal, it’s a tie!
+        </p>
+
+
+        <h2>Scoreboard</h2>
+        <p><strong>Your Score:</strong> Keep track of how many times you win against the computer.<br>
+            <strong>Computer Score:</strong> See how many times the computer triumphs.
+        </p>
+        <p>Reach <strong>10 wins</strong> to claim victory and become the ultimate King of the Jungle! If the computer
+            reaches 10 first, don’t worry—there’s always a next time.</p>
+
+        <h2>Ready to Roar?</h2>
+        <p>Click on your choice below and let the battle begin!</p>
+
+        <div class="choices">
+            <button onclick="playGame('elephant')">Elephant</button>
+            <button onclick="playGame('mouse')">Mouse</button>
+            <button onclick="playGame('lion')">Lion</button>
+        </div>
+
+        <div class="result">
+            <p id="computer-choice"></p>
+            <p id="game-result"></p>
+            <div id="player-score">Your Score: 0</div>
+            <div id="computer-score">Computer Score: 0</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
