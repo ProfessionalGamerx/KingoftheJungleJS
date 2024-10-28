@@ -1,0 +1,55 @@
+let playerScore = 0;
+let computerScore = 0;
+
+function getComputerChoice() {
+    const choices = ["elephant", "mouse", "lion"];
+    return choices[Math.floor(Math.random() * choices.length)];
+}
+
+function getWinner(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return "It's a tie!";
+    } 
+    else if (
+        (playerChoice === "elephant" && computerChoice === "lion") ||
+        (playerChoice === "lion" && computerChoice === "mouse") ||
+        (playerChoice === "mouse" && computerChoice === "elephant")
+    ) {
+        playerScore++;
+        return "You win!";
+    } 
+    else {
+        computerScore++;
+        return "Computer wins!";
+    }
+}
+
+function playGame(playerChoice) {
+    const computerChoice = getComputerChoice();
+    document.getElementById("computer-choice").textContent = `Computer chose: ${computerChoice}`;
+    const result = getWinner(playerChoice, computerChoice);
+    document.getElementById("game-result").textContent = result;
+
+    // Update the scores on the webpage
+    document.getElementById("player-score").textContent = `Your Score: ${playerScore}`;
+    document.getElementById("computer-score").textContent = `Computer Score: ${computerScore}`;
+
+    if (playerScore === 10) {
+        alert("Congratulations! You have reached 10 wins and won the game!\n (Score has been reset to 0.)");
+        resetGame();
+    } 
+    else if (computerScore === 10) {
+        alert("Sorry, you lost the game. Better luck next time!\n (Score has been reset to 0.)");
+        resetGame();  // Reset the scores if the computer wins
+    }
+}
+
+// Function to reset the game scores
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("player-score").textContent = `Your Score: ${playerScore}`;
+    document.getElementById("computer-score").textContent = `Computer Score: ${computerScore}`;
+    document.getElementById("game-result").textContent = "";
+    document.getElementById("computer-choice").textContent = "";
+}
